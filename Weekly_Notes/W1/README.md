@@ -43,6 +43,24 @@ Compared to C and C++, it is indeed more words to put down. Just like the framew
 
 C uses: to inherit
 
-Java uses extends to inherit
+### Java uses extends to inherit
+
+![Java vs C++ Inheritance](image.png)
+
+### Java, you have to use **New ClassName(ConstructorArgs...)**
+
+![Java vs C++ Creating a new Object](image-1.png)
+
+### Java use **abstract** declare abstract class and virtual function
+
+![Virtual and Abstract](image-2.png)
+
+## More Differences
+
+### Java uses different primitive types
+
+![Java primitive types](image-3.png)
+
+### Java has no pointers
 
 (To be continued)
