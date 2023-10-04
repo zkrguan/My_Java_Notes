@@ -150,6 +150,69 @@ Panes can be nested.
 
 1. Event
 
-The term event is used to describe an occurrence of interest.
+definition:
+  The term event is used to describe an occurrence of interest. In a GUI application, an event is an occurrence of a user interaction with the application.
 
-In a GUI application, an event is an occurrence of a user interaction with the application. 
+- event: An event is something that happens in the program based on some kind of triggering input which is typically caused (i.e., generated ) by user interaction such as pressing a key on the keyboard, moving the mouse, or pressing a mouse button.
+
+- source: The source of an event is the component for which the event was generated (i.e., when handling button clicks, the Button is the source ).
+
+- event handler: An event handler is a procedure that contains the code to be executed when a specific type of event occurs in the program.  
+
+Event class hierarchy:
+
+![Alt text](image-6.png)
+
+Event flow:
+
+  The user causes an event by clicking a button, pressing a key, selecting a list item etc..
+
+  Events are generated
+  
+  The appropriate event handler is called.
+
+  The event handling code changes the model in some way.
+
+  The user interface is updated to reflect these changes in the model.
+
+How to handle an event in java FX:
+
+- First identify the types of events that you want to handle.
+
+Typical Java FX events:
+
+![Alt text](image-7.png)
+
+![Alt text](image-8.png)
+
+- Then we need to write the appropriate event handlers.
+
+application logic is contained in the event filters and handlers, which objects of the eventHandler interface.
+
+```java
+public interface EventHandler <T extends Event> extends EventListener{
+  void handle(T event);
+}
+// EventHandler is a generic class in javafx.event package.
+// EventerListeneris a marker interface in java.util package. (Marker interface have no methods in it)
+// handle() method receives the reference of the event
+```
+
+Say you want to handle the button press, here is an example:
+
+```java
+  aButton.setOnAction(new EventHandler ActionEvent >() {
+    public void handle(ActionEvent actionEvent) {
+    // Write your event handler logic in here
+  }
+});
+
+```
+
+button.setOnAction() method for the Button object, by calling that method we successfully hooked up the event handler and that component's event.
+
+This is what people called register that event handler.
+
+In java, many applications can listen for events on teh same component. So, when the event is generated, Java must inform **everyone is listening**.
+
+Pretty much it is **basically same as JS/TS**
