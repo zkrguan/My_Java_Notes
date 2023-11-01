@@ -1,6 +1,6 @@
-# Layout panes
+# Panes, Menus, Dialog Boxes
 
-Layout Pane:
+## Layout Pane
 
 Intro:
 
@@ -13,7 +13,7 @@ UI will appear nicely cross the platform.
 
 Each layout defines methods necessary for a class to be able to arrange Components within a Container.  And there are some examples in JavaFX called, FlowPane, BorderPane, HBox etc.
 
-1. FlowPane(simplest layout pane):
+### FlowPane(simplest layout pane)
 
 It is commonly used to arrange a few elements on a pane.
 
@@ -37,23 +37,24 @@ Example:
     aPane.setPadding(new Insets(25,0,0,25));
     ![Alt text](image-4.png)
 
-2. HBox/VBox(The simplest component to use):
-    Like flow pane, either one after one vertically or horizontally.
-    It does not have wrap around effect.
+### HBox/VBox(The simplest component to use)
 
-    Hbox
+Like flow pane, either one after one vertically or horizontally.
+It does not have wrap around effect.
 
-    ![Alt text](image-5.png)
+Hbox
 
-    Vbox
+![Alt text](image-5.png)
 
-    ![Alt text](image-6.png)
+Vbox
 
-    Also, just like CSS you can set up margin, paddings, an spacing
+![Alt text](image-6.png)
 
-    ![Alt text](image-7.png)
+Also, just like CSS you can set up margin, paddings, an spacing
 
-3. Border Pane:
+![Alt text](image-7.png)
+
+### Border Pane
 
 Instead of re-arranging components, it allows you to place components at one of five anchored positions on the window:
 
@@ -69,7 +70,7 @@ Like this is a typical design.
 
 ![Alt text](image-9.png)
 
-4. Grid Pane:
+### Grid Pane
 
 A GridPane is excellent for arranging a 2D grid of components.
 
